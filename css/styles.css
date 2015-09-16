@@ -1,3 +1,17 @@
 #result {
   display: none;
 }
+
+body {
+  font-family: 'Amatic SC', cursive;
+}
+.jumbotron {
+  background-image: url("../img/subtle_grunge.png");
+}
+.jumbotron h1 {
+  font-family: 'Cinzel', serif;
+}
+
+.text-output {
+  font-size: 48px;
+}

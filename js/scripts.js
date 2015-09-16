@@ -14,13 +14,30 @@
    } else {
      return "Your number is too large! We can only interpret up to 3,999.";
    }
- };
+ }
 
  var thousandInterpreter = function(number) {
-   //go to next
+   if(number >= 1000){
+     return "M" + thousandInterpreter(number - 1000);
+   }
+   if(0 < number< 1000) {
+     return fiveHundredInterpreter(number);
+   }
  }
 
  var fiveHundredInterpreter = function(number) {
+   if(number >= 900) {
+     return "CM" + fiveHundredInterpreter(number - 900);
+   }
+   if(number >= 600) {
+     return "DC" + fiveHundredInterpreter(number - 600);
+   }
+   if(number >= 500) {
+     return "D" + fiveHundredInterpreter(number - 500);
+   }
+   if(0 < number < 500) {
+     return oneHundredInterpreter(number);
+   }
  }
 
  var oneHundredInterpreter = function(number) {
