@@ -14,10 +14,15 @@
    } else {
      return "Your number is too large! We can only interpret up to 3,999.";
    }
- };
+ }
 
  var thousandInterpreter = function(number) {
-   //go to next
+   if(number >= 1000){
+     return "M" + thousandInterpreter(number - 1000);
+   }
+   if(0 < number< 1000) {
+     return fiveHundredInterpreter(number);
+   }
  }
 
  var fiveHundredInterpreter = function(number) {
